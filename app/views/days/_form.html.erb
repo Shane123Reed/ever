@@ -12,20 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :question1 %><br>
-    <%= f.text_area :question1 %>
+    <%= f.text_area :question1, placeholder: 'made you happy today?' %>
   </div>
   <div class="field">
-    <%= f.label :question2 %><br>
-    <%= f.text_area :question2 %>
+    <%= f.text_area :question2, placeholder: "didn't like today?" %>
   </div>
   <div class="field">
-    <%= f.label :question3 %><br>
-    <%= f.text_area :question3 %>
+    <%= f.text_area :question3, placeholder: "looking forward to tomorrow?" %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
     <%= f.text_field :image %>
+    <input type="file" capture="camera" accept="image/*" id="takePictureField">   
+    <img id="yourimage" />
   </div>
   <div class="actions">
     <%= f.submit %>

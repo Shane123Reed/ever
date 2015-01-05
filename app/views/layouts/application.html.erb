@@ -10,5 +10,31 @@
 
 <%= yield %>
 
+<script type="text/javascript">
+
+$(function(){
+
+     //CAPTURE IMG with Phone or Desktop 
+     $("#takePictureField").on("change",gotPic);
+
+     function gotPic(event) {
+        if(event.target.files.length == 1 && 
+           event.target.files[0].type.indexOf("image/") == 0) {
+            $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
+        }
+     }
+     //*CAPTURE IMG with Phone or Desktop 
+
+
+
+
+
+
+
+
+});
+
+</script>
+
 </body>
 </html>
