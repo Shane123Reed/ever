@@ -1,6 +1,7 @@
 <h1>DAYS</h1>
 
      <% @days.each do |day| %>
+          <%= l day.created_at, format: :short %><br>
           <%= day.question1 %><br>
           <%= day.question2 %><br>
           <%= day.question3 %><br>
@@ -8,8 +9,12 @@
           <%= link_to 'Show', day %>
           <%= link_to 'Edit', edit_day_path(day) %>
           <%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <br>
+          <br>
      <% end %>
 <br>
 <br>
 
 <%= link_to 'New Day', new_day_path %>
+
+
