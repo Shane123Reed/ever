@@ -13,10 +13,8 @@
 <script type="text/javascript">
 
 $(function() {
-
   $('.directUpload').find("input:file").each(function(i, elem) {
     var fileInput    = $(elem);
-    console.log(fileInput);
     var form         = $(fileInput.parents('form:first'));
     var submitButton = form.find('input[type="submit"]');
     var progressBar  = $("<div class='bar'></div>");
@@ -34,7 +32,6 @@ $(function() {
       progressall: function (e, data) {
         var progress = parseInt(data.loaded / data.total * 100, 10);
         progressBar.css('width', progress + '%')
-        alert();
       },
       start: function (e) {
         submitButton.prop('disabled', true);
