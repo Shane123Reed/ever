@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require z.jquery.fileupload
 //= require turbolinks
 //= require_tree .
+
+
