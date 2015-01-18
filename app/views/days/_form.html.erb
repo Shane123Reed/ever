@@ -22,9 +22,12 @@
     <%= f.text_area :question3, placeholder: "looking forward to tomorrow?" %>
   </div>
   <div class="field">
-    <%= f.file_field :image %>
+    <%= f.file_field :image, class: 'but' %>
   </div>
+  <br>
+  <br>
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'SAVE', class: 'button' %>
   </div>
 <% end %>

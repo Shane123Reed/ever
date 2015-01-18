@@ -1,17 +1,20 @@
-<h1>DAYS</h1>
+<div class="header">
+     <div class="email"><% if user_signed_in? %><%= current_user.email %><% end %></div>
+</div>
 
-     <% @days.each do |day| %>
-          <%= l day.created_at, format: :short %><br>
+<% @days.each do |day| %>
+     <div><%= l day.created_at, format: :short %></div>
+     <div class="image-container"><img class="day-image" src="<%= day.image %>"/></div>
+     <div>
           <%= day.question1 %><br>
           <%= day.question2 %><br>
           <%= day.question3 %><br>
-          <img src="<%= day.image %>"/><br><br>
-          <%= link_to 'Show', day %>
-          <%= link_to 'Edit', edit_day_path(day) %>
-          <%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <br>
-          <br>
-     <% end %>
+     </div>
+     <%= link_to 'Edit', edit_day_path(day) %>
+     <%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %>
+     <br>
+     <br>
+<% end %>
 <br>
 <br>
 
