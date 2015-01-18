@@ -5,7 +5,7 @@
           <%= day.question1 %><br>
           <%= day.question2 %><br>
           <%= day.question3 %><br>
-          <%= day.image %><br><br>
+          <img src="<%= day.image %>"/><br><br>
           <%= link_to 'Show', day %>
           <%= link_to 'Edit', edit_day_path(day) %>
           <%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %>

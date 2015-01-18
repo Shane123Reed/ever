@@ -11,6 +11,8 @@
 $(function() {
   $('.directUpload').find("input:file").each(function(i, elem) {
     var fileInput    = $(elem);
+    var fileInput    = $(elem);
+    console.log(fileInput);
     var form         = $(fileInput.parents('form:first'));
     var submitButton = form.find('input[type="submit"]');
     var progressBar  = $("<div class='bar'></div>");
@@ -44,7 +46,7 @@ $(function() {
 
         // extract key and generate URL from response
         var key   = $(data.jqXHR.responseXML).find("Key").text();
-        var url   = '//<%= @s3_direct_post.url.host %>/' + key;
+        var url   = 'https://<%= @s3_direct_post.url.host %>/' + key;
 
         // create hidden field
         var input = $("<input />", { type:'hidden', name: fileInput.attr('name'), value: url })
