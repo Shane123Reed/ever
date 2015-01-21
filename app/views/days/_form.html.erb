@@ -25,8 +25,24 @@
     <%= f.file_field :image, class: 'but' %>
   </div>
   <br>
+<!--   <br>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <form id="myform">
+        <input type="file" id="file" /> </br>
+        <label>Camera Model</label>
+        <input type="text" name="cameraModel" id="cameraModel" /> </br>
+
+        <label>Aperture</label>
+        <input type="text" name="aperture" id="aperture" /> </br>
+
+      </form>
+  <br>
+  <br>
+  <br> -->
   <div class="actions">
     <%= f.submit 'SAVE', class: 'button' %>
   </div>
@@ -34,6 +50,22 @@
 
 
 <script type="text/javascript">
+
+var someCallback = function(exifObject) {
+            $('#cameraModel').val(exifObject.Model);
+            $('#aperture').val(exifObject.FNumber);
+            // Uncomment the line below to examine the
+            // EXIF object in console to read other values
+            console.log(exifObject);
+        }
+      try {
+        $('#file').change(function() {
+            $(this).fileExif(someCallback);
+        });
+      }
+      catch (e) {
+        alert(e);
+      }
 
 $(function() {
   $('.directUpload').find("input:file").each(function(i, elem) {
