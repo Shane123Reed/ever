@@ -4,7 +4,9 @@ class DaysController < ApplicationController
   # GET /days
   # GET /days.json
   def index
-    @days = current_user.days.all
+    if current_user
+      @days = current_user.days.all
+    end
   end
 
   # GET /days/1
@@ -30,11 +32,11 @@ class DaysController < ApplicationController
 
     respond_to do |format|
       if @day.save
-        format.html { redirect_to @day, notice: 'Day was successfully created.' }
+        format.html { redirect_to @days, notice: 'Day was successfully created.' }
         format.json { render action: 'show', status: :created, location: @day }
       else
         format.html { render action: 'new' }
-        format.json { render json: @day.errors, status: :unprocessable_entity }
+        format.json { render json: @days.errors, status: :unprocessable_entity }
       end
     end
   end

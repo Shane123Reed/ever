@@ -2,22 +2,34 @@
      <div class="email"><% if user_signed_in? %><%= current_user.email %><% end %></div>
 </div>
 
-<% @days.each do |day| %>
-     <div><%= l day.created_at, format: :short %></div>
-     <div class="image-container"><img class="day-image" src="<%= day.image %>"/></div>
-     <div>
-          <%= day.question1 %><br>
-          <%= day.question2 %><br>
-          <%= day.question3 %><br>
-     </div>
-     <%= link_to 'Edit', edit_day_path(day) %>
-     <%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %>
-     <br>
-     <br>
-<% end %>
-<br>
-<br>
+<% if user_signed_in? %>
 
-<%= link_to 'New Day', new_day_path %>
+     <% @days.each do |day| %>
+          <div class="image-container"><img class="day-image" src="<%= day.image %>"/></div>
+          <div>
+               <div><%= l day.created_at, format: :short %></div>
+               <%= day.question1 %><br>
+               <%= day.question2 %><br>
+               <%= day.question3 %><br>
+          </div>
+          <div class="editing">
+          <%= link_to 'Edit', edit_day_path(day) %> |
+          <%= link_to 'Delete', day, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+          <br>
+          <br>
+     <% end %>
+
+     <br>
+     <br>
+
+     <%= link_to 'New Day', new_day_path %>
+
+<% else %>
+
+     <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+
+<% end %>
 
 
