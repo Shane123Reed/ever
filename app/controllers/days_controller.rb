@@ -4,7 +4,7 @@ class DaysController < ApplicationController
   # GET /days
   # GET /days.json
   def index
-    @days = Day.all
+    @days = current_user.days.all
   end
 
   # GET /days/1
@@ -26,7 +26,7 @@ class DaysController < ApplicationController
   # POST /days.json
   def create
     @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: 201, acl: :public_read)
-    @day = Day.new(day_params)
+    @day = current_user.days.new(day_params)
 
     respond_to do |format|
       if @day.save
