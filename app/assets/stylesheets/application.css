@@ -76,16 +76,20 @@ input:focus {
   outline: none;
 }
 
+.but {
+  position: relative;
+  top: 20px;
+}
 
 .but::-webkit-file-upload-button {
   visibility: hidden;
 }
 .but::before {
+  margin: 0 auto;
   position: relative;
-  left: 90px;
-  top: 25px;
+  top: 20px;
   content: 'photo';
-  display: inline-block;
+  display: block;
   border: 1px solid gray;
   border-radius: 50px;
   height: 35px;
@@ -106,6 +110,7 @@ input:focus {
    text-align: center;
    color: rgb(200,200,200);
    font-size: 14px;
+   border-radius: 0px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
