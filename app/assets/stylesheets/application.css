@@ -72,6 +72,11 @@ textarea {
   background-color: rgb(245,245,245);
 }
 
+input:focus {
+  outline: none;
+}
+
+
 .but::-webkit-file-upload-button {
   visibility: hidden;
 }
