@@ -32,7 +32,7 @@ class DaysController < ApplicationController
 
     respond_to do |format|
       if @day.save
-        format.html { redirect_to @days, notice: 'Day was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Day was successfully created.' }
         format.json { render action: 'show', status: :created, location: @day }
       else
         format.html { render action: 'new' }

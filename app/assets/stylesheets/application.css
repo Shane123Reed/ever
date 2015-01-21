@@ -39,8 +39,10 @@ body {
   position: relative;
   height: 50px;
   width: 100%;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(240, 240, 240);
   color: white;
+  font-size: 15px;
+  letter-spacing: 2px;
 }
 
 .email {
@@ -140,6 +142,14 @@ textarea:focus {
   letter-spacing: 2px;
   margin-top: 10px;
   font-size: 8px;
+}
+
+.new-day {
+  display: inline-block;
+  padding-top: 10px;
+  height: 35px;
+  width: 100%;
+  font-size: 20px;
 }
 
 
