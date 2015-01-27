@@ -47,7 +47,7 @@ class DaysController < ApplicationController
   def update
     respond_to do |format|
       if @day.update(day_params)
-        format.html { redirect_to @day, notice: 'Day was successfully updated.' }
+        format.html { redirect_to root_url, notice: 'Day was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
