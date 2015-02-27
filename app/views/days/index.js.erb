@@ -1,0 +1,7 @@
+alert();
+$('#infinte').append('<%= j render(@days) %>');
+<% if @days.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@days) %>');
+<% else %>
+  $('.pagination').remove();
+<% end %>

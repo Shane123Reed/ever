@@ -18,5 +18,30 @@
      <%= link_to "sign out ", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 </div>
 <br>
+
+
+<script type="text/javascript">
+     
+$(function(){
+          
+          // PAGINATION
+          if ($('.pagination').length) {
+               $(window).scroll(function() {
+                    var url;
+                    url = $('.pagination .next_page').attr('href');
+                    if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 450) {
+                         $('.pagination').text("Getting more...");
+                         return $.getScript(url);
+                    }
+               });
+               return $(window).scroll();
+          }
+          // PAGINATION end
+
+});
+
+
+</script>
+
 </body>
 </html>

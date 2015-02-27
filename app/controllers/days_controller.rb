@@ -5,7 +5,7 @@ class DaysController < ApplicationController
   # GET /days.json
   def index
     if current_user
-      @days = current_user.days.all
+      @days = current_user.days.page(params[:page]).per_page(3)
     end
   end
 

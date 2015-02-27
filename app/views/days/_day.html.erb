@@ -1,0 +1,19 @@
+
+     <div class="image-container" style="background-image: url(<%= day.image %>);"/></div>
+     <div class="entry">
+          <div class="editing">
+               <%= l day.created_at, format: :short %>
+          </div>
+          <br>
+          <br>
+          <%= day.question1 %><br><hr>
+          <%= day.question2 %><br><hr>
+          <%= day.question3 %><br>
+          <br>
+          <br>
+          <div class="editing">
+               <%= link_to 'Edit', edit_day_path(day) %>
+<!--                     <%= link_to 'Delete', day, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+          </div>
+     </div>
+
