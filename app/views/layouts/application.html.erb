@@ -29,7 +29,7 @@ $(function(){
                $(window).scroll(function() {
                     var url;
                     url = $('.pagination .next_page').attr('href');
-                    if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 450) {
+                    if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 750) {
                          $('.pagination').text("Getting more...");
                          return $.getScript(url);
                     }
