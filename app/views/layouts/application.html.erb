@@ -13,8 +13,9 @@
 <body>
 <div id="container">
      <%= yield %>
+     <br>
      <%= link_to "sign out ", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 </div>
-
+<br>
 </body>
 </html>
