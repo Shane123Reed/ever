@@ -12,6 +12,10 @@
      <link rel="apple-touch-icon" href="https://catchframedev.s3.amazonaws.com/uploads/7a2aaee6-fa48-42a0-9244-c24d99dd3f2b/icon.png"/>
 </head>
 <body>
+     <navbar>
+          <img src="https://catchframedev.s3.amazonaws.com/uploads/7a2aaee6-fa48-42a0-9244-c24d99dd3f2b/icon.png" id="scroll-home"/>
+          <a href="/days/new" class="new-day">+</a>
+     </navbar>
 <div id="container">
      <%= yield %>
      <br>
@@ -38,7 +42,14 @@ $(function(){
           }
           // PAGINATION end
 
+          
+
 });
+          $('body').on("click", '#scroll-home', function() {
+               $('body').animate({scrollTop:0}, '500', 'swing', function() { 
+
+               });  
+          });
 
 
 </script>
