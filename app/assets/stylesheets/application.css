@@ -100,6 +100,7 @@ navbar img {
   opacity: .7;
   height: 40px;
   width: auto;
+  float: left;
 }
 
 
@@ -204,10 +205,11 @@ textarea:focus {
   width: 50px;
   font-size: 20px;
   color: white;
-  top: -16px;
+  top: 5px;
   left: 150px;
 
 }
+
 
 
 
