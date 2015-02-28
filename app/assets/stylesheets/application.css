@@ -97,10 +97,15 @@ navbar {
 }
 
 navbar img {
-  opacity: .7;
+  display: inline;
+  position: relative;
   height: 40px;
   width: auto;
-  float: left;
+  font-size: 20px;
+  color: white;
+  top: 0px;
+  right: 171px;
+  opacity: .8;
 }
 
 
@@ -205,9 +210,8 @@ textarea:focus {
   width: 50px;
   font-size: 20px;
   color: white;
-  top: 5px;
+  top: -16px;
   left: 150px;
-
 }
 
 
