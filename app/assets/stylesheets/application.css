@@ -26,7 +26,7 @@ body {
 
 #container {
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 25px;
   max-width: 400px;
 }
 
@@ -87,7 +87,7 @@ a {
 }
 
 navbar {
-  background-color: rgba(230,230,230,.7);
+  background-color: rgba(230,230,230,.8);
   position: fixed;
   left: 0;
   top: 0;
