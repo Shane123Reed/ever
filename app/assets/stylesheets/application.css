@@ -69,7 +69,7 @@ hr {
 }
 
 .entry {
-  position: relative;
+  position: absolute;
   width: 380px;
   padding-right: 10px;
   padding-left: 10px;
@@ -77,7 +77,7 @@ hr {
   padding-top: 80px;
   margin-top: -400px;
   background-color: rgba(0,0 ,0,.3);
-  z-index: 2;
+  z-index: 999999999999999999;
   border-bottom: 1px solid rgb(230,230,230);
   opacity: 1;
 }
