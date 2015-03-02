@@ -27,6 +27,7 @@ body {
 #container {
   margin: 0 auto;
   margin-top: 25px;
+  width: 100%;
   max-width: 400px;
 }
 
@@ -36,16 +37,6 @@ hr {
   size: 1px;
   border-style: none;
   border-bottom: 1px solid white;
-}
-
-.image-container {
-  background-position: center top;
-  background-color: rgba(200,200 ,200,.9);
-  background-size: cover;
-  height: 400px;
-  width: 100%;
-  max-width: 768px;
-  z-index: 2000000;
 }
 
 .header {
@@ -68,6 +59,15 @@ hr {
   height: auto;
 }
 
+
+.image-container {
+  background-position: center top;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  max-width: 400px;
+}
+
 .entry {
   position: relative;
   width: 380px;
@@ -76,9 +76,10 @@ hr {
   height: 320px;
   padding-top: 80px;
   margin-top: -400px;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0,0 ,0,.3);
   z-index: 2;
   border-bottom: 1px solid rgb(230,230,230);
+  opacity: 1;
 }
 
 a {
