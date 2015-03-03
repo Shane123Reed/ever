@@ -1,5 +1,5 @@
-     <div>
-          <img class="image-container" src="<%= day.image %>"/>
+     <div class="day-container">
+          <img class="image" src="<%= day.image %>"/>
           <div class="entry">
                <div class="editing">
                     <%= l day.created_at, format: :short %>
@@ -13,7 +13,7 @@
                <br>
                <div class="editing">
                     <%= link_to 'Edit', edit_day_path(day) %>
-     <!--                     <%= link_to 'Delete', day, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+                    <%= link_to '| Delete', day, method: :delete, data: { confirm: 'Are you sure?' } %>
                </div>
           </div>
      </div>

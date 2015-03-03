@@ -31,6 +31,34 @@ body {
   max-width: 400px;
 }
 
+#infinte {
+  padding: 0;
+  width: 400px;
+  height: auto;
+}
+
+.image {
+  background-position: center top;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.entry {
+  position: absolute;
+  width: 380px;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 320px;
+  padding-top: 80px;
+  margin-top: -400px;
+  background-color: rgba(0,0 ,0,.3);
+  z-index: 999999999999999999;
+  border-bottom: 1px solid rgb(230,230,230);
+  opacity: 1;
+}
+
 hr {
   opacity: .2;
   width: 50%;
@@ -52,34 +80,6 @@ hr {
 .email {
   position: relative;
   padding-top: 15px;
-}
-
-.day-image {
-  width: 100%;
-  height: auto;
-}
-
-
-.image-container {
-  background-position: center top;
-  background-size: cover;
-  height: 400px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.entry {
-  position: absolute;
-  width: 380px;
-  padding-right: 10px;
-  padding-left: 10px;
-  height: 320px;
-  padding-top: 80px;
-  margin-top: -400px;
-  background-color: rgba(0,0 ,0,.3);
-  z-index: 999999999999999999;
-  border-bottom: 1px solid rgb(230,230,230);
-  opacity: 1;
 }
 
 a {
