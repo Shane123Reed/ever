@@ -12,12 +12,13 @@
      <link rel="apple-touch-icon" href="https://catchframedev.s3.amazonaws.com/uploads/7a2aaee6-fa48-42a0-9244-c24d99dd3f2b/icon.png"/>
 </head>
 <body>
-     
+
 <div id="container">
-<!--      <navbar id="scroll-home">
-          <a href="/"><img src="https://catchframedev.s3.amazonaws.com/uploads/7a2aaee6-fa48-42a0-9244-c24d99dd3f2b/icon.png" id="home"/></a>
-          <a href="/days/new" class="new-day">+</a>
-     </navbar> -->
+     <div id="scroll-home">
+     <a href="/"><img src="https://catchframedev.s3.amazonaws.com/uploads/7a2aaee6-fa48-42a0-9244-c24d99dd3f2b/icon.png" id="home"/></a>
+     <a href="/days/new" class="new-day">+</a>
+     </div>
+     
      <%= yield %>
      <br>
      <%= link_to "sign out ", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>

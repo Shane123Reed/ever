@@ -14,7 +14,6 @@
 
 
 body {
-  margin: 0;
   font-size: 16px;
   color: white;
   font-family: "Helvetica Neue";
@@ -28,31 +27,42 @@ body {
   margin: 0 auto;
   margin-top: 25px;
   width: 100%;
-  max-width: 400px;
+  width: 400px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #infinte {
   padding: 0;
-  width: 400px;
+  width: 100%;
   height: auto;
 }
 
+.day-container {
+  height: 401px;
+}
+
 .image {
-  background-position: center top;
-  background-size: cover;
   height: 400px;
   width: 100%;
   max-width: 400px;
 }
 
+img {
+  padding: 0px;
+}
+
 .entry {
-  position: absolute;
-  width: 380px;
-  padding-right: 10px;
-  padding-left: 10px;
+  position: relative;
+  width: 400px;
   height: 320px;
   padding-top: 80px;
-  margin-top: -400px;
+  margin-top: -403px;
   background-color: rgba(0,0 ,0,.3);
   z-index: 999999999999999999;
   border-bottom: 1px solid rgb(230,230,230);
@@ -87,26 +97,33 @@ a {
   color: gray;
 }
 
-navbar {
-  background-color: rgba(230,230,230,.8);
+#scroll-home {
   position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
+  display: block;
+  margin-top: -25px;
+  width: 400px;
   height: 25px;
-  z-index: 999999999;
+  z-index: 99999999999999999999999999999999999999999;
+  background-color: black;
 }
 
-navbar img {
-  display: inline;
-  position: relative;
+#scroll-home img {
   height: 25px;
-  width: auto;
-  font-size: 20px;
+  width: 25px;
   color: white;
-  top: 0px;
-  right: 172px;
   opacity: .8;
+  display: block;
+}
+
+.new-day {
+  position: relative;
+  float: right;
+  height: 25px;
+  width: 25px;
+  font-size: 18px;
+  color: white;
+  top: -25px;
+  background-color: black;
 }
 
 
@@ -204,17 +221,7 @@ textarea:focus {
   font-size: 8px;
 }
 
-.new-day {
-  display: inline-block;
-  position: relative;
-  height: 25px;
-  width: 25px;
-  font-size: 18px;
-  color: white;
-  top: -8px;
-  left: 172px;
-  background-color: black;
-}
+
 
 
 
