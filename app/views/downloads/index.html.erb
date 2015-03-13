@@ -1,0 +1,33 @@
+<h1>Listing downloads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Count</th>
+      <th>Ip</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @downloads.each do |download| %>
+      <tr>
+        <td><%= download.name %></td>
+        <td><%= download.email %></td>
+        <td><%= download.count %></td>
+        <td><%= download.ip %></td>
+        <td><%= link_to 'Show', download %></td>
+        <td><%= link_to 'Edit', edit_download_path(download) %></td>
+        <td><%= link_to 'Destroy', download, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Download', new_download_path %>
