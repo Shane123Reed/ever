@@ -22,6 +22,12 @@ class DownloadsController < ApplicationController
   def edit
   end
 
+  def download
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def create
     @ip = request.remote_ip
     params[:webpage][:ip] = @ip

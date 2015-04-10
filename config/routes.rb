@@ -3,6 +3,9 @@ Ever::Application.routes.draw do
   post 'downloads/cloud' => 'downloads#create'
   get 'downloads/cloud' => 'downloads#create'
 
+  post 'downloads/down' => 'downloads#download'
+  get 'downloads/down' => 'downloads#download'
+
   resources :days
 
   root to: 'days#index'
