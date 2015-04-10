@@ -23,13 +23,11 @@ class DownloadsController < ApplicationController
   end
 
   def download
-    respond_to do |format|
       if Download.exists?(email: params[:webpage][:email])
-        format.js
+        render :js => "window.location.href = 'https://s3.amazonaws.com/cinegrain/images/CineHeaderRoundedEdges.png';"
       else
-        format.js { alert('Not the right Email, Maybe a Typo?');}
+        render :js => "alert('Oops, incorrect Email address, maybe a Typo?');"
       end
-    end
   end
 
   def create
