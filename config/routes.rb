@@ -3,7 +3,9 @@ Ever::Application.routes.draw do
   post 'downloads/cloud' => 'downloads#create'
   get 'downloads/cloud' => 'downloads#create'
 
-  get 'downloads/lh2k3389935sa' => 'downloads#thirtyfive'
+  get 'downloads/lh2k3389935sa' => 'downloads#thirtyfive_p1'
+  get 'downloads/43kjh99352sasd' => 'downloads#thirtyfive_p2'
+  get 'downloads/p9idk43899353s' => 'downloads#thirtyfive_p3'
   get 'downloads/down' => 'downloads#sixteen'
   get 'downloads/down' => 'downloads#eight'
   get 'downloads/down' => 'downloads#grain'
