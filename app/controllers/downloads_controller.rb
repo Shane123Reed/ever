@@ -26,7 +26,7 @@ class DownloadsController < ApplicationController
       if Download.exists?(email: params[:webpage][:email])
         s3 = AWS::S3.new(access_key_id: ENV['AWS_ACCESS_KEY_ID'], secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'] )
         downobject = s3.buckets['catchframe'].objects['kjahsdf/untitled.zip']
-        @tempurl = downobject.url_for(:read, { expires: 10.days.from_now, acl: :authenticated_read }).to_s
+        @tempurl = downobject.url_for(:read, { expires: 10.days.from_now, secure: true}).to_s
       else
         render :js => "alert('Oops, incorrect Email address, maybe a typo?');"
       end
