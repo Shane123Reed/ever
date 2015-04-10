@@ -24,7 +24,11 @@ class DownloadsController < ApplicationController
 
   def download
     respond_to do |format|
-      format.js
+      if Download.exists?(email: params[:webpage][:email])
+        format.js
+      else
+        format.js { alert('Not the right Email, Maybe a Typo?');}
+      end
     end
   end
 
