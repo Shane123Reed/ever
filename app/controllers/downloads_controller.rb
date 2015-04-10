@@ -22,11 +22,43 @@ class DownloadsController < ApplicationController
   def edit
   end
 
-  def download
+  def thirtyfive
       if Download.exists?(email: params[:webpage][:email])
         render :js => "window.location.href = 'https://s3.amazonaws.com/cinegrain/images/CineHeaderRoundedEdges.png';"
       else
-        render :js => "alert('Oops, incorrect Email address, maybe a Typo?');"
+        render :js => "alert('Oops, incorrect Email address, maybe a typo?');"
+      end
+  end
+
+  def sixteen
+      if Download.exists?(email: params[:webpage][:email])
+        render :js => "window.location.href = 'https://s3.amazonaws.com/cinegrain/images/CineHeaderRoundedEdges.png';"
+      else
+        render :js => "alert('Oops, incorrect Email address, maybe a typo?');"
+      end
+  end
+
+  def eight
+      if Download.exists?(email: params[:webpage][:email])
+        render :js => "window.location.href = 'https://s3.amazonaws.com/cinegrain/images/CineHeaderRoundedEdges.png';"
+      else
+        render :js => "alert('Oops, incorrect Email address, maybe a typo?');"
+      end
+  end
+
+  def grain
+      if Download.exists?(email: params[:webpage][:email])
+        render :js => "window.location.href = 'https://s3.amazonaws.com/cinegrain/images/CineHeaderRoundedEdges.png';"
+      else
+        render :js => "alert('Oops, incorrect Email address, maybe a typo?');"
+      end
+  end
+
+  def artifacts
+      if Download.exists?(email: params[:webpage][:email])
+        render :js => "window.location.href = 'https://s3.amazonaws.com/cinegrain/images/CineHeaderRoundedEdges.png';"
+      else
+        render :js => "alert('Oops, incorrect Email address, maybe a typo?');"
       end
   end
 

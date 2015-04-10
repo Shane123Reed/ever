@@ -3,8 +3,12 @@ Ever::Application.routes.draw do
   post 'downloads/cloud' => 'downloads#create'
   get 'downloads/cloud' => 'downloads#create'
 
-  post 'downloads/down' => 'downloads#download'
-  get 'downloads/down' => 'downloads#download'
+  get 'downloads/lh2k3389935sa' => 'downloads#thirtyfive'
+  get 'downloads/down' => 'downloads#sixteen'
+  get 'downloads/down' => 'downloads#eight'
+  get 'downloads/down' => 'downloads#grain'
+  get 'downloads/down' => 'downloads#artifacts'
+
 
   resources :days
 
